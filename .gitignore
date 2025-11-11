@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs / temp
+logs/
+*.log
+
+# Rosetta binaries & vendor stuff (통째로 제외)
+rosetta/
+
+
+# 입력/결과 중 대용량 파일 패턴(원하면 조정)
+*.pdb.gz
+*.tar
+*.zip
+
+# Rosetta
+rosetta/
+rosetta.binary*/
+*.binary*/
+
+# 또는 특정 경로만
+/rosetta/
