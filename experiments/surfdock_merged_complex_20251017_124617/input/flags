@@ -1,0 +1,31 @@
+-database /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database
+-s input/complex.pdb
+-nstruct 10
+
+# Output
+-out:pdb
+-out:file:scorefile output/score.sc
+-out:path:all output/
+-overwrite
+
+# Score
+-score:weights ref2015
+
+# Surface Docking
+-docking:partners A_Z
+-in:file:surface_vectors input/surface_vectors.txt
+-docking:low_res_protocol_only false
+-docking:dock_mcm_first_cycles 0
+-include_surfaces
+
+# Packing
+-packing:ex1
+-packing:ex2aro
+
+# General
+-run:preserve_header
+-run:jran 1760672777
+-in:file:frag3 input/albumin_3mers
+-in:file:frag9 input/albumin_9mers
+-extra_res_fa input/PSF.params
+-extra_res_fa input/TI4.params

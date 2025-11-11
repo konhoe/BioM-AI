@@ -1,0 +1,572 @@
+********  (C) Copyright Rosetta Commons Member Institutions.  ***************
+* Use of Rosetta for commercial purposes may require purchase of a license. *
+********  See LICENSE.md or email license@uw.edu for more details. **********
+core.init: Checking for fconfig files in pwd and ./rosetta/flags 
+core.init: Rosetta version: rosetta.binary.m1.release-371 r371 2024.09+release.06b3cf8ad0 06b3cf8ad0940d628690d0ed6fa2009d72ad2b44 https://www.rosettacommons.org 2024-02-28T21:25:09.004217
+core.init: command: /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/source/bin/surface_docking.static.macosclangrelease @input/flags
+basic.random.init_random_generator: 'RNG device' seed mode, using '/dev/urandom', seed=-1566788722 seed_offset=0 real_seed=-1566788722
+basic.random.init_random_generator: RandomGenerator:init: Normal mode, seed=-1566788722 RG_type=mt19937
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+core.chemical.GlobalResidueTypeSet: Finished initializing fa_standard residue type set.  Created 989 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 0.253654 seconds.
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/all.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+core.scoring.P_AA: shapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+protocols.SurfaceDocking.SurfaceDockingProtocol: Setting Weights for talaris
+protocols.jd2.PDBJobInputter: Instantiate PDBJobInputter
+protocols.jd2.PDBJobInputter: PDBJobInputter::fill_jobs
+protocols.jd2.PDBJobInputter: pushed input/complex.pdb nstruct index 1
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB input/complex.pdb
+core.import_pose.import_pose: File 'input/complex.pdb' automatically determined to be of type PDB
+core.chemical.GlobalResidueTypeSet: Loading (but possibly not actually using) 'AL4' from the PDB components dictionary for residue type 'pdb_AL4'
+core.chemical.GlobalResidueTypeSet: Loading (but possibly not actually using) 'TI4' from the PDB components dictionary for residue type 'pdb_TI4'
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 1 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 2 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 3 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 4 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 5 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 6 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 7 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 8 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 9 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 10 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 11 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 12 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 13 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 14 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 15 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 16 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 17 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 18 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 19 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 20 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 21 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 22 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 23 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 24 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 25 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 26 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 27 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 28 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 29 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 30 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 31 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 32 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 33 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 34 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 35 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 36 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 37 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 38 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 39 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 40 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 41 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 42 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 43 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 44 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 45 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 46 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 47 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 48 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 49 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 50 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 51 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 52 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 53 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 54 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 55 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 56 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 57 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 58 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 59 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 60 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 61 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 62 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 63 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 64 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 65 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 66 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 67 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 68 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 69 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 70 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 71 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 72 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 73 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 74 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 75 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 76 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 77 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 78 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 79 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 80 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 81 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 82 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 83 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 84 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 85 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 86 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 87 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 88 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 89 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 90 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 91 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 92 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 93 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 94 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 95 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 96 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 97 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 98 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 99 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 100 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 101 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 102 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 103 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 104 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 105 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 106 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 107 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 108 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 109 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 110 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 111 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 112 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 113 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 114 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 115 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 116 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 117 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 118 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 119 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 120 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 121 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 122 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 123 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 124 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 125 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 126 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 127 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 128 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 129 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 130 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 131 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 132 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 133 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 134 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 135 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 136 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 137 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 138 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 139 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 140 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 141 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 142 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 143 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 144 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 145 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 146 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 147 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 148 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 149 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 150 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 151 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 152 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 153 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 154 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 155 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 156 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 157 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 158 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 159 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 160 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 161 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 162 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 163 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 164 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 165 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 166 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 167 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 168 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 169 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 170 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 171 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 172 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 173 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 174 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 175 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 176 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 177 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 178 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 179 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 180 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 181 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 182 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 183 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 184 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 185 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 186 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 187 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 188 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 189 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 190 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 191 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 192 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 193 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 194 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 195 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 196 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 197 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 198 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 199 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 200 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 201 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 202 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 203 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 204 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 205 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 206 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 207 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 208 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 209 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 210 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 211 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 212 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 213 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 214 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 215 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 216 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 217 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 218 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 219 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 220 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 221 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 222 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 223 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 224 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 225 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 226 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 227 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 228 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 229 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 230 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 231 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 232 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 233 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 234 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 235 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 236 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 237 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 238 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 239 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 240 in file input/complex.pdb. Best match rsd_type:  pdb_AL4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 241 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 242 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 243 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 244 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 245 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 246 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 247 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 248 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 249 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 250 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 251 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 252 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 253 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 254 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 255 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 256 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 257 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 258 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 259 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 260 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 261 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 262 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 263 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 264 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 265 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 266 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 267 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 268 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 269 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 270 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 271 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 272 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 273 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 274 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 275 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 276 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 277 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 278 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 279 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 280 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 281 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 282 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 283 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 284 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 285 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 286 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 287 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 288 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 289 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 290 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 291 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 292 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 293 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 294 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 295 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 296 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 297 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 298 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 299 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 300 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 301 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 302 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 303 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 304 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 305 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 306 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 307 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 308 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 309 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 310 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 311 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 312 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 313 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 314 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 315 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 316 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 317 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 318 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 319 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 320 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 321 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 322 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 323 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 324 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 325 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 326 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 327 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 328 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 329 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 330 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 331 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 332 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 333 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 334 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 335 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 336 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 337 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 338 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 339 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 340 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 341 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 342 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 343 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 344 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 345 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 346 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 347 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 348 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 349 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 350 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 351 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 352 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 353 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 354 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 355 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 356 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 357 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 358 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 359 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 360 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 361 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 362 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 363 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 364 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 365 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 366 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 367 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 368 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 369 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 370 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 371 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 372 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 373 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 374 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 375 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 376 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 377 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 378 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 379 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 380 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 381 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 382 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 383 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 384 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 385 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 386 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 387 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 388 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 389 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 390 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 391 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 392 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 393 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 394 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 395 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 396 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 397 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 398 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 399 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 400 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 401 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 402 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 403 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 404 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 405 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 406 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 407 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 408 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 409 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 410 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 411 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 412 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 413 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 414 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 415 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 416 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 417 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 418 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 419 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 420 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 421 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 422 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 423 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 424 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 425 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 426 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 427 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 428 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 429 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 430 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 431 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 432 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 433 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 434 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 435 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 436 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 437 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 438 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 439 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 440 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 441 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 442 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 443 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 444 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 445 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 446 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 447 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 448 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 449 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 450 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 451 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 452 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 453 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 454 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 455 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 456 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 457 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 458 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 459 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 460 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 461 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 462 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 463 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 464 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 465 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 466 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 467 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 468 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 469 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 470 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 471 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 472 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 473 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 474 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 475 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 476 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 477 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 478 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 479 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.io.pose_from_sfr.PoseFromSFRBuilder: [ WARNING ] discarding 1 atoms at position 480 in file input/complex.pdb. Best match rsd_type:  pdb_TI4
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C3 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C9 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C10 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C11 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C12 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C14 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C16 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: O1A on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: O2A on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: N21 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: S1 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C4 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C5 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C6 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: S2 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: S7 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: O3B on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: O4B on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: N8 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: N15 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: O13 on residue pdb_AL4 1
+core.conformation.Conformation: [ WARNING ] missing heavyatom: C17 on residue pdb_AL4 1
+
+ERROR: too many tries in fill_missing_atoms!
+ERROR:: Exit from: src/core/conformation/Conformation.cc line: 1933
+Error: [ ERROR ] ERROR: Exception caught by JobDistributor while trying to get pose from job 'complex_0001'
+Error: [ ERROR ] Treating failure as bad input; canceling similar jobs
+
+[ ERROR ]: Caught exception:
+
+
+File: src/core/conformation/Conformation.cc:1933
+[ ERROR ] UtilityExitException
+ERROR: too many tries in fill_missing_atoms!
+
+
+
+
+AN INTERNAL ERROR HAS OCCURED. PLEASE SEE THE CONTENTS OF ROSETTA_CRASH.log FOR DETAILS.
+
+
+protocols.jd2.FileSystemJobDistributor: job failed, reporting bad input; other jobs of same input will be canceled: complex_0001
+protocols.jd2.JobDistributor: no more batches to process... 
+protocols.jd2.JobDistributor: 1 jobs considered, 1 jobs attempted in 0 seconds
+
+---------------------------------------------------------------
+[ ERROR ]: Error(s) were encountered when running jobs.
+1 jobs failed;
+Check the output further up for additional error messages.
+---------------------------------------------------------------
+

@@ -1,0 +1,204 @@
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8ad0
+[COMMIT_DATE]: 2024-02-28T21:25:09.004217
+[APPLICATION]: surface_docking.static.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:include_surfaces -in:file:s=albumin_calcite.pdb -in:file:frag3=albumin_9mers -in:file:frag9=albumin_3mers -in:file:surface_vectors=calcite.surf -out:overwrite -out:nstruct=10 -out:mute=all -out:unmute=protocols.SurfaceDocking -out:path:pdb=/Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/ -out:path:score=/Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/ -run:test_cycles
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   surface_docking.static.macosclangre 0x00000001043da904 backtrace_string(int) + 76
+1   surface_docking.static.macosclangre 0x00000001043eac44 utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 180
+2   surface_docking.static.macosclangre 0x00000001043ddd7c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 112
+3   surface_docking.static.macosclangre 0x00000001043ddcb8 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int) + 60
+4   surface_docking.static.macosclangre 0x0000000102afc660 protocols::jd2::wwPDBJobOutputter::other_pose(std::__1::shared_ptr<protocols::jd2::Job>, core::pose::Pose const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, bool) + 1880
+5   surface_docking.static.macosclangre 0x0000000102af8474 protocols::jd2::output_intermediate_pose(core::pose::Pose const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, bool) + 256
+6   surface_docking.static.macosclangre 0x00000001013ea4d0 protocols::surface_docking::FullatomRelaxMover::output_solution_state(core::pose::Pose&) + 524
+7   surface_docking.static.macosclangre 0x00000001013eb500 protocols::surface_docking::FullatomRelaxMover::refinement_cycle(core::pose::Pose&) + 548
+8   surface_docking.static.macosclangre 0x00000001013eb6a4 protocols::surface_docking::FullatomRelaxMover::apply(core::pose::Pose&) + 292
+9   surface_docking.static.macosclangre 0x00000001013ed810 protocols::surface_docking::SurfaceDockingProtocol::apply(core::pose::Pose&) + 1244
+10  surface_docking.static.macosclangre 0x0000000102ac9894 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, unsigned long&, unsigned long&, bool) + 7052
+11  surface_docking.static.macosclangre 0x0000000102ac6e7c protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 136
+12  surface_docking.static.macosclangre 0x0000000102ac21e0 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 72
+13  surface_docking.static.macosclangre 0x000000010091cc7c main + 244
+14  dyld                                0x000000018ed11d54 start + 7184
+
+[END_BACKTRACE]
+
+[FILE]: src/protocols/jd2/wwPDBJobOutputter.cc
+[LINE]: 100
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Unable to open file: /Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/SolState__albumin_calcite_0001.pdb
+
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8ad0
+[COMMIT_DATE]: 2024-02-28T21:25:09.004217
+[APPLICATION]: surface_docking.static.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:include_surfaces -in:file:s=albumin_calcite.pdb -in:file:frag3=albumin_9mers -in:file:frag9=albumin_3mers -in:file:surface_vectors=calcite.surf -out:overwrite -out:nstruct=10 -out:mute=all -out:unmute=protocols.SurfaceDocking -out:path:pdb=/Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/ -out:path:score=/Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/ -run:test_cycles
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   surface_docking.static.macosclangre 0x00000001043da904 backtrace_string(int) + 76
+1   surface_docking.static.macosclangre 0x00000001043eac44 utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 180
+2   surface_docking.static.macosclangre 0x00000001043ddd7c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 112
+3   surface_docking.static.macosclangre 0x00000001043ddcb8 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int) + 60
+4   surface_docking.static.macosclangre 0x0000000102afc660 protocols::jd2::wwPDBJobOutputter::other_pose(std::__1::shared_ptr<protocols::jd2::Job>, core::pose::Pose const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, bool) + 1880
+5   surface_docking.static.macosclangre 0x0000000102af8474 protocols::jd2::output_intermediate_pose(core::pose::Pose const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, bool) + 256
+6   surface_docking.static.macosclangre 0x00000001013ea4d0 protocols::surface_docking::FullatomRelaxMover::output_solution_state(core::pose::Pose&) + 524
+7   surface_docking.static.macosclangre 0x00000001013eb500 protocols::surface_docking::FullatomRelaxMover::refinement_cycle(core::pose::Pose&) + 548
+8   surface_docking.static.macosclangre 0x00000001013eb6a4 protocols::surface_docking::FullatomRelaxMover::apply(core::pose::Pose&) + 292
+9   surface_docking.static.macosclangre 0x00000001013ed810 protocols::surface_docking::SurfaceDockingProtocol::apply(core::pose::Pose&) + 1244
+10  surface_docking.static.macosclangre 0x0000000102ac9894 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, unsigned long&, unsigned long&, bool) + 7052
+11  surface_docking.static.macosclangre 0x0000000102ac6e7c protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 136
+12  surface_docking.static.macosclangre 0x0000000102ac21e0 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 72
+13  surface_docking.static.macosclangre 0x000000010091cc7c main + 244
+14  dyld                                0x000000018ed11d54 start + 7184
+
+[END_BACKTRACE]
+
+[FILE]: src/protocols/jd2/wwPDBJobOutputter.cc
+[LINE]: 100
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Unable to open file: /Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/SolState__albumin_calcite_0002.pdb
+
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8ad0
+[COMMIT_DATE]: 2024-02-28T21:25:09.004217
+[APPLICATION]: surface_docking.static.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:include_surfaces -in:file:s=albumin_calcite.pdb -in:file:frag3=albumin_9mers -in:file:frag9=albumin_3mers -in:file:surface_vectors=calcite.surf -out:overwrite -out:nstruct=10 -out:mute=all -out:unmute=protocols.SurfaceDocking -out:path:pdb=/Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/ -out:path:score=/Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/ -run:test_cycles
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   surface_docking.static.macosclangre 0x00000001043da904 backtrace_string(int) + 76
+1   surface_docking.static.macosclangre 0x00000001043eac44 utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 180
+2   surface_docking.static.macosclangre 0x00000001043ddd7c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 112
+3   surface_docking.static.macosclangre 0x00000001043ddcb8 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int) + 60
+4   surface_docking.static.macosclangre 0x0000000102afc660 protocols::jd2::wwPDBJobOutputter::other_pose(std::__1::shared_ptr<protocols::jd2::Job>, core::pose::Pose const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, bool) + 1880
+5   surface_docking.static.macosclangre 0x0000000102af8474 protocols::jd2::output_intermediate_pose(core::pose::Pose const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, bool) + 256
+6   surface_docking.static.macosclangre 0x00000001013ea4d0 protocols::surface_docking::FullatomRelaxMover::output_solution_state(core::pose::Pose&) + 524
+7   surface_docking.static.macosclangre 0x00000001013eb500 protocols::surface_docking::FullatomRelaxMover::refinement_cycle(core::pose::Pose&) + 548
+8   surface_docking.static.macosclangre 0x00000001013eb6a4 protocols::surface_docking::FullatomRelaxMover::apply(core::pose::Pose&) + 292
+9   surface_docking.static.macosclangre 0x00000001013ed810 protocols::surface_docking::SurfaceDockingProtocol::apply(core::pose::Pose&) + 1244
+10  surface_docking.static.macosclangre 0x0000000102ac9894 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, unsigned long&, unsigned long&, bool) + 7052
+11  surface_docking.static.macosclangre 0x0000000102ac6e7c protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 136
+12  surface_docking.static.macosclangre 0x0000000102ac21e0 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 72
+13  surface_docking.static.macosclangre 0x000000010091cc7c main + 244
+14  dyld                                0x000000018ed11d54 start + 7184
+
+[END_BACKTRACE]
+
+[FILE]: src/protocols/jd2/wwPDBJobOutputter.cc
+[LINE]: 100
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Unable to open file: /Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/SolState__albumin_calcite_0003.pdb
+
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8ad0
+[COMMIT_DATE]: 2024-02-28T21:25:09.004217
+[APPLICATION]: surface_docking.static.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:include_surfaces -in:file:s=albumin_calcite.pdb -in:file:frag3=albumin_9mers -in:file:frag9=albumin_3mers -in:file:surface_vectors=calcite.surf -out:overwrite -out:nstruct=10 -out:mute=all -out:unmute=protocols.SurfaceDocking -out:path:pdb=/Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/ -out:path:score=/Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/ -run:test_cycles
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   surface_docking.static.macosclangre 0x00000001043da904 backtrace_string(int) + 76
+1   surface_docking.static.macosclangre 0x00000001043eac44 utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 180
+2   surface_docking.static.macosclangre 0x00000001043ddd7c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 112
+3   surface_docking.static.macosclangre 0x00000001043ddcb8 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int) + 60
+4   surface_docking.static.macosclangre 0x0000000102afc660 protocols::jd2::wwPDBJobOutputter::other_pose(std::__1::shared_ptr<protocols::jd2::Job>, core::pose::Pose const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, bool) + 1880
+5   surface_docking.static.macosclangre 0x0000000102af8474 protocols::jd2::output_intermediate_pose(core::pose::Pose const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int, bool) + 256
+6   surface_docking.static.macosclangre 0x00000001013ea4d0 protocols::surface_docking::FullatomRelaxMover::output_solution_state(core::pose::Pose&) + 524
+7   surface_docking.static.macosclangre 0x00000001013eb500 protocols::surface_docking::FullatomRelaxMover::refinement_cycle(core::pose::Pose&) + 548
+8   surface_docking.static.macosclangre 0x00000001013eb6a4 protocols::surface_docking::FullatomRelaxMover::apply(core::pose::Pose&) + 292
+9   surface_docking.static.macosclangre 0x00000001013ed810 protocols::surface_docking::SurfaceDockingProtocol::apply(core::pose::Pose&) + 1244
+10  surface_docking.static.macosclangre 0x0000000102ac9894 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, unsigned long&, unsigned long&, bool) + 7052
+11  surface_docking.static.macosclangre 0x0000000102ac6e7c protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 136
+12  surface_docking.static.macosclangre 0x0000000102ac21e0 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 72
+13  surface_docking.static.macosclangre 0x000000010091cc7c main + 244
+14  dyld                                0x000000018ed11d54 start + 7184
+
+[END_BACKTRACE]
+
+[FILE]: src/protocols/jd2/wwPDBJobOutputter.cc
+[LINE]: 100
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Unable to open file: /Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output/SolState__albumin_calcite_0004.pdb
+
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+

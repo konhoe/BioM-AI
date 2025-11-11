@@ -1,0 +1,249 @@
+********  (C) Copyright Rosetta Commons Member Institutions.  ***************
+* Use of Rosetta for commercial purposes may require purchase of a license. *
+********  See LICENSE.md or email license@uw.edu for more details. **********
+core.init: Checking for fconfig files in pwd and ./rosetta/flags 
+core.init: Rosetta version: rosetta.binary.m1.release-371 r371 2024.09+release.06b3cf8ad0 06b3cf8ad0940d628690d0ed6fa2009d72ad2b44 https://www.rosettacommons.org 2024-02-28T21:25:09.004217
+core.init: command: /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/source/bin/score_jd2.static.macosclangrelease -in:file:s complex_0001.pdb complex_0002.pdb complex_0003.pdb complex_0004.pdb complex_0005.pdb complex_0006.pdb complex_0007.pdb complex_0008.pdb complex_0009.pdb complex_0010.pdb -out:file:scorefile score.sc -in:file:extra_res_fa /Users/junyoung/Desktop/BioMatAI/metal-protein/experiments/surfdock_merged_albumin_NiSe_20251029_152807/input/NI4.params -in:file:extra_res_fa /Users/junyoung/Desktop/BioMatAI/metal-protein/experiments/surfdock_merged_albumin_NiSe_20251029_152807/input/SE6.params
+basic.random.init_random_generator: 'RNG device' seed mode, using '/dev/urandom', seed=-1627364603 seed_offset=0 real_seed=-1627364603
+basic.random.init_random_generator: RandomGenerator:init: Normal mode, seed=-1627364603 RG_type=mt19937
+core.init: found database environment variable ROSETTA3_DB: /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database
+core.scoring.ScoreFunctionFactory: SCOREFUNCTION: ref2015
+core.scoring.etable: Starting energy table calculation
+core.scoring.etable: smooth_etable: changing atr/rep split to bottom of energy well
+core.scoring.etable: smooth_etable: spline smoothing lj etables (maxdis = 6)
+core.scoring.etable: smooth_etable: spline smoothing solvation etables (max_dis = 6)
+core.scoring.etable: Finished calculating energy tables.
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+core.chemical.GlobalResidueTypeSet: Finished initializing fa_standard residue type set.  Created 987 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 0.248299 seconds.
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/all.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/rama/fd/prepro.ramaProb
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.all.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.gly.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.pro.txt
+basic.io.database: Database file opened: scoring/score_functions/omega/omega_ppdep.valile.txt
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/P_AA_n
+core.scoring.P_AA: shapovalov_lib::shap_p_aa_pp_smooth_level of 1( aka low_smooth ) got activated.
+basic.io.database: Database file opened: scoring/score_functions/P_AA_pp/shapovalov/10deg/kappa131/a20.prop
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+protocols.jd2.PDBJobInputter: Instantiate PDBJobInputter
+protocols.jd2.PDBJobInputter: PDBJobInputter::fill_jobs
+protocols.jd2.PDBJobInputter: pushed complex_0001.pdb nstruct index 1
+protocols.jd2.PDBJobInputter: pushed complex_0002.pdb nstruct index 1
+protocols.jd2.PDBJobInputter: pushed complex_0003.pdb nstruct index 1
+protocols.jd2.PDBJobInputter: pushed complex_0004.pdb nstruct index 1
+protocols.jd2.PDBJobInputter: pushed complex_0005.pdb nstruct index 1
+protocols.jd2.PDBJobInputter: pushed complex_0006.pdb nstruct index 1
+protocols.jd2.PDBJobInputter: pushed complex_0007.pdb nstruct index 1
+protocols.jd2.PDBJobInputter: pushed complex_0008.pdb nstruct index 1
+protocols.jd2.PDBJobInputter: pushed complex_0009.pdb nstruct index 1
+protocols.jd2.PDBJobInputter: pushed complex_0010.pdb nstruct index 1
+protocols.evaluation.ChiWellRmsdEvaluatorCreator: Evaluation Creator active ... 
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0001.pdb
+core.import_pose.import_pose: File 'complex_0001.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5831 5847
+core.conformation.Conformation: Found disulfide between residues 5846 5857
+core.conformation.Conformation: Found disulfide between residues 5880 5925
+core.conformation.Conformation: Found disulfide between residues 5924 5933
+core.conformation.Conformation: Found disulfide between residues 5956 6002
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6034 6045
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6148 6194
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6217 6233
+core.conformation.Conformation: Found disulfide between residues 6232 6243
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+core.conformation.Conformation: Found disulfide between residues 6314 6323
+basic.io.database: Database file opened: scoring/score_functions/elec_cp_reps.dat
+core.scoring.elec.util: Read 40 countpair representative atoms
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib_fixes_enable option is true.
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+core.pack.dunbrack.RotamerLibrary: Binary rotamer library selected: /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+core.pack.dunbrack.RotamerLibrary: Using Dunbrack library binary file '/Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+core.pack.dunbrack.RotamerLibrary: Dunbrack 2010 library took 0.048683 seconds to load from binary
+protocols.jd2.JobDistributor: complex_0001_0001 reported success in 2 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0002.pdb
+core.import_pose.import_pose: File 'complex_0002.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5831 5847
+core.conformation.Conformation: Found disulfide between residues 5880 5925
+core.conformation.Conformation: Found disulfide between residues 5924 5933
+core.conformation.Conformation: Found disulfide between residues 5956 6002
+core.conformation.Conformation: Found disulfide between residues 6001 6009
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6034 6045
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6116 6125
+core.conformation.Conformation: Found disulfide between residues 6148 6194
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6232 6243
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+core.conformation.Conformation: Found disulfide between residues 6314 6323
+protocols.jd2.JobDistributor: complex_0002_0001 reported success in 2 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0003.pdb
+core.import_pose.import_pose: File 'complex_0003.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5831 5847
+core.conformation.Conformation: Found disulfide between residues 5846 5857
+core.conformation.Conformation: Found disulfide between residues 5880 5925
+core.conformation.Conformation: Found disulfide between residues 5924 5933
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6116 6125
+core.conformation.Conformation: Found disulfide between residues 6148 6194
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6217 6233
+core.conformation.Conformation: Found disulfide between residues 6232 6243
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+protocols.jd2.JobDistributor: complex_0003_0001 reported success in 3 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0004.pdb
+core.import_pose.import_pose: File 'complex_0004.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5831 5847
+core.conformation.Conformation: Found disulfide between residues 5846 5857
+core.conformation.Conformation: Found disulfide between residues 5880 5925
+core.conformation.Conformation: Found disulfide between residues 5924 5933
+core.conformation.Conformation: Found disulfide between residues 5956 6002
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6116 6125
+core.conformation.Conformation: Found disulfide between residues 6148 6194
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6217 6233
+core.conformation.Conformation: Found disulfide between residues 6232 6243
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+core.conformation.Conformation: Found disulfide between residues 6314 6323
+protocols.jd2.JobDistributor: complex_0004_0001 reported success in 2 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0005.pdb
+core.import_pose.import_pose: File 'complex_0005.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5831 5847
+core.conformation.Conformation: Found disulfide between residues 5846 5857
+core.conformation.Conformation: Found disulfide between residues 5956 6002
+core.conformation.Conformation: Found disulfide between residues 6001 6009
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6034 6045
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6116 6125
+core.conformation.Conformation: Found disulfide between residues 6148 6194
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6217 6233
+core.conformation.Conformation: Found disulfide between residues 6232 6243
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+core.conformation.Conformation: Found disulfide between residues 6314 6323
+protocols.jd2.JobDistributor: complex_0005_0001 reported success in 3 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0006.pdb
+core.import_pose.import_pose: File 'complex_0006.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5831 5847
+core.conformation.Conformation: Found disulfide between residues 5846 5857
+core.conformation.Conformation: Found disulfide between residues 5880 5925
+core.conformation.Conformation: Found disulfide between residues 5924 5933
+core.conformation.Conformation: Found disulfide between residues 5956 6002
+core.conformation.Conformation: Found disulfide between residues 6001 6009
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6034 6045
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6116 6125
+core.conformation.Conformation: Found disulfide between residues 6148 6194
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6217 6233
+core.conformation.Conformation: Found disulfide between residues 6232 6243
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+core.conformation.Conformation: Found disulfide between residues 6314 6323
+protocols.jd2.JobDistributor: complex_0006_0001 reported success in 2 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0007.pdb
+core.import_pose.import_pose: File 'complex_0007.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5831 5847
+core.conformation.Conformation: Found disulfide between residues 5846 5857
+core.conformation.Conformation: Found disulfide between residues 5880 5925
+core.conformation.Conformation: Found disulfide between residues 5924 5933
+core.conformation.Conformation: Found disulfide between residues 5956 6002
+core.conformation.Conformation: Found disulfide between residues 6001 6009
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6034 6045
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6116 6125
+core.conformation.Conformation: Found disulfide between residues 6148 6194
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6217 6233
+core.conformation.Conformation: Found disulfide between residues 6232 6243
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+core.conformation.Conformation: Found disulfide between residues 6314 6323
+protocols.jd2.JobDistributor: complex_0007_0001 reported success in 2 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0008.pdb
+core.import_pose.import_pose: File 'complex_0008.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5846 5857
+core.conformation.Conformation: Found disulfide between residues 5880 5925
+core.conformation.Conformation: Found disulfide between residues 5924 5933
+core.conformation.Conformation: Found disulfide between residues 5956 6002
+core.conformation.Conformation: Found disulfide between residues 6001 6009
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6034 6045
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6116 6125
+core.conformation.Conformation: Found disulfide between residues 6148 6194
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6217 6233
+core.conformation.Conformation: Found disulfide between residues 6232 6243
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+protocols.jd2.JobDistributor: complex_0008_0001 reported success in 3 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0009.pdb
+core.import_pose.import_pose: File 'complex_0009.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5831 5847
+core.conformation.Conformation: Found disulfide between residues 5846 5857
+core.conformation.Conformation: Found disulfide between residues 5880 5925
+core.conformation.Conformation: Found disulfide between residues 5924 5933
+core.conformation.Conformation: Found disulfide between residues 5956 6002
+core.conformation.Conformation: Found disulfide between residues 6001 6009
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6034 6045
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6116 6125
+core.conformation.Conformation: Found disulfide between residues 6148 6194
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6217 6233
+core.conformation.Conformation: Found disulfide between residues 6232 6243
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+core.conformation.Conformation: Found disulfide between residues 6314 6323
+protocols.jd2.JobDistributor: complex_0009_0001 reported success in 2 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB complex_0010.pdb
+core.import_pose.import_pose: File 'complex_0010.pdb' automatically determined to be of type PDB
+core.conformation.Conformation: Found disulfide between residues 5809 5818
+core.conformation.Conformation: Found disulfide between residues 5831 5847
+core.conformation.Conformation: Found disulfide between residues 5846 5857
+core.conformation.Conformation: Found disulfide between residues 5880 5925
+core.conformation.Conformation: Found disulfide between residues 5924 5933
+core.conformation.Conformation: Found disulfide between residues 5956 6002
+core.conformation.Conformation: Found disulfide between residues 6001 6009
+core.conformation.Conformation: Found disulfide between residues 6021 6035
+core.conformation.Conformation: Found disulfide between residues 6034 6045
+core.conformation.Conformation: Found disulfide between residues 6072 6117
+core.conformation.Conformation: Found disulfide between residues 6116 6125
+core.conformation.Conformation: Found disulfide between residues 6193 6204
+core.conformation.Conformation: Found disulfide between residues 6217 6233
+core.conformation.Conformation: Found disulfide between residues 6270 6315
+core.conformation.Conformation: Found disulfide between residues 6314 6323
+protocols.jd2.JobDistributor: complex_0010_0001 reported success in 2 seconds
+protocols.jd2.JobDistributor: no more batches to process... 
+protocols.jd2.JobDistributor: 10 jobs considered, 10 jobs attempted in 24 seconds

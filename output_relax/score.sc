@@ -1,0 +1,3 @@
+SEQUENCE: 
+SCORE: total_score coordinate_constraint dslf_fa13    fa_atr    fa_dun   fa_elec fa_intra_rep fa_intra_sol_xover4              fa_rep              fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb lk_ball_wtd       omega     p_aa_pp pro_close rama_prepro         ref yhh_planarity description 
+SCORE:    -435.360               375.217   -19.130 -3399.661  1041.174  -914.642        6.987             122.486             429.835            2321.069     -50.729      -3.248     -58.366    -345.178     -99.933      34.857     -59.410     3.834      48.061     130.567         0.849 albumin_A_0001

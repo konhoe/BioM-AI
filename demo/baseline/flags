@@ -1,0 +1,16 @@
+-s albumin_calcite.pdb
+-include_surfaces
+-mute all
+-unmute protocols.SurfaceDocking
+-unmute core.chemical
+-unmute core.chemical.ResidueTypeSet
+-unmute core.chemical.ChemicalManager
+-overwrite
+-nstruct 1
+-out:path:pdb /Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output
+-out:path:score /Users/junyoung/Desktop/BioMatAI/metal-protein/example/baseline/output
+-out:levels core.chemical:trace core.chemical.ResidueTypeSet:trace core.chemical.ChemicalManager:trace
+-in:file:frag9 albumin_3mers
+-in:file:frag3 albumin_9mers
+-in::file::surface_vectors calcite.surf
+-run:test_cycles True

@@ -1,0 +1,61 @@
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8ad0
+[COMMIT_DATE]: 2024-02-28T21:25:09.004217
+[APPLICATION]: /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/source/bin/score_jd2.static.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:include_surfaces -in:path:database=/Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database/ -in:file:s=input/complex.pdb complex_0001.pdb complex_0002.pdb complex_0003.pdb complex_0004.pdb complex_0005.pdb complex_0006.pdb complex_0007.pdb complex_0008.pdb complex_0009.pdb complex_0010.pdb -in:file:extra_res_fa=input/PSF.params input/TI4.params -in:file:frag3=input/albumin_3mers -in:file:frag9=input/albumin_9mers -in:file:surface_vectors=input/surface_vectors.txt -out:overwrite -out:nstruct=10 -out:pdb -out:file:scorefile=score.sc -out:path:all=output/ -packing:ex1 -packing:ex2aro -docking:partners=A_Z -docking:low_res_protocol_only=false -docking:dock_mcm_first_cycles=0 -run:jran=1760672777 -run:preserve_header -score:weights=ref2015
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   score_jd2.static.macosclangrelease  0x0000000106364d84 backtrace_string(int) + 76
+1   score_jd2.static.macosclangrelease  0x0000000106374e5c utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 180
+2   score_jd2.static.macosclangrelease  0x0000000106367f94 utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 112
+3   score_jd2.static.macosclangrelease  0x0000000106367ed0 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int) + 60
+4   score_jd2.static.macosclangrelease  0x0000000105e51044 core::chemical::read_topology_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::weak_ptr<core::chemical::AtomTypeSet const>, std::__1::weak_ptr<core::chemical::ElementSet const>, std::__1::weak_ptr<core::chemical::MMAtomTypeSet const>, std::__1::weak_ptr<core::chemical::orbitals::OrbitalTypeSet const>) + 1080
+5   score_jd2.static.macosclangrelease  0x0000000105df42d0 core::chemical::GlobalResidueTypeSet::init_restypes_from_commandline() + 712
+6   score_jd2.static.macosclangrelease  0x0000000105df1304 core::chemical::GlobalResidueTypeSet::GlobalResidueTypeSet(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 376
+7   score_jd2.static.macosclangrelease  0x0000000105de1f14 core::chemical::ChemicalManager::create_residue_type_set(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) const + 1156
+8   score_jd2.static.macosclangrelease  0x0000000105de18c0 core::chemical::ChemicalManager::residue_type_set(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 140
+9   score_jd2.static.macosclangrelease  0x0000000105561fc0 core::scoring::RamaPrePro::read_canonical_rpp_tables() + 152
+10  score_jd2.static.macosclangrelease  0x0000000105562784 core::scoring::RamaPrePro::RamaPrePro() + 84
+11  score_jd2.static.macosclangrelease  0x00000001055d9bcc core::scoring::ScoringManager::create_ramapp_instance() + 52
+12  score_jd2.static.macosclangrelease  0x00000001055d9a4c core::scoring::ScoringManager::get_RamaPrePro() const + 140
+13  score_jd2.static.macosclangrelease  0x00000001051acd08 core::energy_methods::RamaPreProEnergy::RamaPreProEnergy() + 168
+14  score_jd2.static.macosclangrelease  0x00000001051acbf0 core::energy_methods::RamaPreProEnergyCreator::create_energy_method(core::scoring::methods::EnergyMethodOptions const&) const + 52
+15  score_jd2.static.macosclangrelease  0x000000010559fbc0 core::scoring::ScoreFunction::set_weight(core::scoring::ScoreType const&, double) + 664
+16  score_jd2.static.macosclangrelease  0x00000001055a3000 core::scoring::ScoreFunction::_add_weights_from_stream(std::__1::basic_istream<char, std::__1::char_traits<char>>&, bool, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 9952
+17  score_jd2.static.macosclangrelease  0x000000010559fe8c core::scoring::ScoreFunction::_add_weights_from_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, bool) + 324
+18  score_jd2.static.macosclangrelease  0x000000010559edc0 core::scoring::ScoreFunction::add_weights_from_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 80
+19  score_jd2.static.macosclangrelease  0x00000001055bfa80 core::scoring::ScoreFunctionFactory::load_score_function_from_disk(utility::options::OptionCollection const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>> const&) + 1364
+20  score_jd2.static.macosclangrelease  0x00000001055c0204 std::__1::shared_ptr<core::scoring::ScoreFunction> utility::thread::safely_check_map_for_key_and_insert_if_absent<core::scoring::ScoreFunction, core::scoring::ScoreFunctionKey>(std::__1::function<std::__1::shared_ptr<core::scoring::ScoreFunction> ()>, bool, core::scoring::ScoreFunctionKey const&, std::__1::map<core::scoring::ScoreFunctionKey, std::__1::shared_ptr<core::scoring::ScoreFunction>, std::__1::less<core::scoring::ScoreFunctionKey>, std::__1::allocator<std::__1::pair<core::scoring::ScoreFunctionKey const, std::__1::shared_ptr<core::scoring::ScoreFunction>>>>&) + 144
+21  score_jd2.static.macosclangrelease  0x00000001055bdcd0 core::scoring::ScoreFunctionFactory::create_score_function_nonstatic(utility::options::OptionCollection const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, utility::vector1<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>>> const&) + 524
+22  score_jd2.static.macosclangrelease  0x00000001055c2114 core::scoring::get_score_function(utility::options::OptionCollection const&, bool) + 1708
+23  score_jd2.static.macosclangrelease  0x00000001028afbcc MyScoreMover::MyScoreMover() + 72
+24  score_jd2.static.macosclangrelease  0x00000001028b0628 main + 444
+25  dyld                                0x0000000190279d54 start + 7184
+
+[END_BACKTRACE]
+
+[FILE]: src/core/chemical/residue_io.cc
+[LINE]: 143
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot find file 'input/PSF.params or /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database/chemical/residue_type_sets/fa_standard/residue_types/input/PSF.params'
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+

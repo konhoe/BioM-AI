@@ -1,0 +1,100 @@
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8ad0
+[COMMIT_DATE]: 2024-02-28T21:25:09.004217
+[APPLICATION]: /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/source/bin/surface_docking.static.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:include_surfaces -in:path:database=/Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database/ -in:file:s=input/complex.pdb -in:file:extra_res_fa=input/BA4.params -in:file:frag3=input/albumin_3mers -in:file:frag9=input/albumin_9mers -in:file:surface_vectors=input/surface_vectors.txt -out:overwrite -out:nstruct=10 -out:pdb -out:file:scorefile=output/score.sc -out:path:all=output/ -run:jran=1761708008 -run:preserve_header -score:weights=ref2015 -packing:ex1 -packing:ex2aro -docking:partners=A_Z -docking:low_res_protocol_only=false -docking:dock_mcm_first_cycles=0
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   surface_docking.static.macosclangre 0x0000000105faa904 backtrace_string(int) + 76
+1   surface_docking.static.macosclangre 0x0000000105fbac44 utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 180
+2   surface_docking.static.macosclangre 0x0000000105fadd7c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 112
+3   surface_docking.static.macosclangre 0x0000000105fadcb8 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int) + 60
+4   surface_docking.static.macosclangre 0x00000001044a731c protocols::simple_moves::ClassicFragmentMover::end_bias_check(core::pose::Pose const&, unsigned long) const + 1104
+5   surface_docking.static.macosclangre 0x00000001044a75fc protocols::simple_moves::ClassicFragmentMover::choose_window_start(core::pose::Pose const&, unsigned long, unsigned long&) const + 636
+6   surface_docking.static.macosclangre 0x00000001044a7ad4 protocols::simple_moves::ClassicFragmentMover::apply(core::pose::Pose&) + 396
+7   surface_docking.static.macosclangre 0x0000000104752170 protocols::moves::TrialMover::apply(core::pose::Pose&) + 96
+8   surface_docking.static.macosclangre 0x0000000102d06e50 protocols::abinitio::ClassicAbinitio::do_stage1_cycles(core::pose::Pose&) + 324
+9   surface_docking.static.macosclangre 0x0000000102d013d4 protocols::abinitio::ClassicAbinitio::apply(core::pose::Pose&) + 4788
+10  surface_docking.static.macosclangre 0x0000000102fbd574 protocols::surface_docking::SurfaceDockingProtocol::apply(core::pose::Pose&) + 576
+11  surface_docking.static.macosclangre 0x0000000104699894 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, unsigned long&, unsigned long&, bool) + 7052
+12  surface_docking.static.macosclangre 0x0000000104696e7c protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 136
+13  surface_docking.static.macosclangre 0x00000001046921e0 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 72
+14  surface_docking.static.macosclangre 0x00000001024ecc7c main + 244
+15  dyld                                0x0000000190279d54 start + 7184
+
+[END_BACKTRACE]
+
+[FILE]: src/protocols/simple_moves/FragmentMover.cc
+[LINE]: 308
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Assertion failure: runtime_assert( ( begin + size - 1 ) <= pose.size() ); 
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8ad0
+[COMMIT_DATE]: 2024-02-28T21:25:09.004217
+[APPLICATION]: /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/source/bin/surface_docking.static.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:include_surfaces -in:path:database=/Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database/ -in:file:s=input/complex.pdb -in:file:extra_res_fa=input/BA4.params -in:file:frag3=input/albumin_3mers -in:file:frag9=input/albumin_9mers -in:file:surface_vectors=input/surface_vectors.txt -out:overwrite -out:nstruct=10 -out:pdb -out:file:scorefile=output/score.sc -out:path:all=output/ -run:jran=1761708008 -run:preserve_header -score:weights=ref2015 -packing:ex1 -packing:ex2aro -docking:partners=A_Z -docking:low_res_protocol_only=false -docking:dock_mcm_first_cycles=0
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+1   surface_docking.static.macosclangre 0x0000000105fab538 utility::signal_handler(int) + 328
+2   libsystem_platform.dylib            0x0000000190642744 _sigtramp + 56
+3   surface_docking.static.macosclangre 0x00000001047c6e98 core::fragment::BBTorsionSRFD::apply(core::kinematics::MoveMap const&, core::pose::Pose&, unsigned long) const + 100
+4   surface_docking.static.macosclangre 0x00000001047c6e98 core::fragment::BBTorsionSRFD::apply(core::kinematics::MoveMap const&, core::pose::Pose&, unsigned long) const + 100
+5   surface_docking.static.macosclangre 0x00000001047cb834 core::fragment::FragData::apply(core::kinematics::MoveMap const&, core::pose::Pose&, unsigned long, unsigned long) const + 176
+6   surface_docking.static.macosclangre 0x00000001044a76f8 protocols::simple_moves::ClassicFragmentMover::apply_fragment(core::fragment::Frame const&, unsigned long, core::kinematics::MoveMap const&, core::pose::Pose&) const + 24
+7   surface_docking.static.macosclangre 0x00000001044a81e0 protocols::simple_moves::ClassicFragmentMover::apply_frames(core::pose::Pose&, core::fragment::FrameList const&) const + 636
+8   surface_docking.static.macosclangre 0x00000001044a7c40 protocols::simple_moves::ClassicFragmentMover::apply(core::pose::Pose&) + 760
+9   surface_docking.static.macosclangre 0x0000000104752170 protocols::moves::TrialMover::apply(core::pose::Pose&) + 96
+10  surface_docking.static.macosclangre 0x0000000102d06e50 protocols::abinitio::ClassicAbinitio::do_stage1_cycles(core::pose::Pose&) + 324
+11  surface_docking.static.macosclangre 0x0000000102d013d4 protocols::abinitio::ClassicAbinitio::apply(core::pose::Pose&) + 4788
+12  surface_docking.static.macosclangre 0x0000000102fbd574 protocols::surface_docking::SurfaceDockingProtocol::apply(core::pose::Pose&) + 576
+13  surface_docking.static.macosclangre 0x0000000104699894 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, unsigned long&, unsigned long&, bool) + 7052
+14  surface_docking.static.macosclangre 0x0000000104696e7c protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 136
+15  surface_docking.static.macosclangre 0x00000001046921e0 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 72
+16  surface_docking.static.macosclangre 0x00000001024ecc7c main + 244
+17  dyld                                0x0000000190279d54 start + 7184
+
+[END_BACKTRACE]
+
+[FILE]: SIGSEGV
+[LINE]: 11
+[START_MESSAGE]
+Segmentation Fault
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+

@@ -1,0 +1,21 @@
+# Database & input
+-database /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database
+-s /Users/junyoung/Desktop/BIOMATAI/metal-protein/experiments/relax_albumin_20251017_161823/input/albumin_A.pdb
+-nstruct 1
+
+# Output
+-out:pdb
+-out:path:all output/
+-out:file:scorefile output/relax_score.sc
+-overwrite
+
+# Scoring
+-score:weights ref2015
+
+# Relax options
+-relax:fast
+-relax:constrain_relax_to_start_coords
+-relax:coord_constrain_sidechains
+
+# General
+-run:jran 1760685503
