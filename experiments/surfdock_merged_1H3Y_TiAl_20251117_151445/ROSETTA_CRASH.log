@@ -1,0 +1,51 @@
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8ad0
+[COMMIT_DATE]: 2024-02-28T21:25:09.004217
+[APPLICATION]: /Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/source/bin/surface_docking.static.macosclangrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: Apple Mac OS X
+[COMPILER]: Clang version "14.0.0 (clang-1400.0.29.202)"
+[STDLIB]: libc++ version 13000
+[START_OPTIONS]
+ -in:include_surfaces -in:path:database=/Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main/database/ -in:file:s=input/complex.pdb -in:file:extra_res_fa=input/AL4.params input/TI4.params -in:file:frag3=input/1H3Y_3mers -in:file:frag9=input/1H3Y_9mers -in:file:surface_vectors=input/surface_vectors.txt -out:overwrite -out:nstruct=1 -out:pdb -out:file:scorefile=output/score.sc -out:path:all=output/ -run:jran=1763360085 -run:preserve_header -score:weights=ref2015 -packing:ex1 -packing:ex2aro -docking:partners=A_Z -docking:low_res_protocol_only=false -docking:dock_mcm_first_cycles=0
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+0   surface_docking.static.macosclangre 0x00000001064c2904 backtrace_string(int) + 76
+1   surface_docking.static.macosclangre 0x00000001064d2c44 utility::excn::Exception::Exception(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 180
+2   surface_docking.static.macosclangre 0x00000001064c5d7c utility::UtilityExitException::UtilityExitException(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 112
+3   surface_docking.static.macosclangre 0x00000001064c5cb8 utility::exit(char const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, int) + 60
+4   surface_docking.static.macosclangre 0x0000000104ce07c4 core::fragment::ConstantLengthFragSet::add_(std::__1::shared_ptr<core::fragment::Frame>) + 456
+5   surface_docking.static.macosclangre 0x0000000104cebc38 core::fragment::FragSet::add(std::__1::shared_ptr<core::fragment::Frame const>) + 444
+6   surface_docking.static.macosclangre 0x0000000104ce0e40 core::fragment::ConstantLengthFragSet::read_fragment_stream(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, std::__1::basic_istream<char, std::__1::char_traits<char>>&, unsigned long, unsigned long, bool) + 1600
+7   surface_docking.static.macosclangre 0x0000000104cdfff0 core::fragment::ConstantLengthFragSet::read_fragment_file(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long, unsigned long, bool) + 292
+8   surface_docking.static.macosclangre 0x00000001034d7924 protocols::surface_docking::SurfaceDockingProtocol::setup_abinitio() + 672
+9   surface_docking.static.macosclangre 0x00000001034d651c protocols::surface_docking::SurfaceDockingProtocol::setup_movers(core::pose::Pose const&, unsigned long) + 940
+10  surface_docking.static.macosclangre 0x00000001034d5404 protocols::surface_docking::SurfaceDockingProtocol::apply(core::pose::Pose&) + 208
+11  surface_docking.static.macosclangre 0x0000000104bb1894 protocols::jd2::JobDistributor::run_one_job(std::__1::shared_ptr<protocols::moves::Mover>&, long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>&, unsigned long&, unsigned long&, bool) + 7052
+12  surface_docking.static.macosclangre 0x0000000104baee7c protocols::jd2::JobDistributor::go_main(std::__1::shared_ptr<protocols::moves::Mover>) + 136
+13  surface_docking.static.macosclangre 0x0000000104baa1e0 protocols::jd2::FileSystemJobDistributor::go(std::__1::shared_ptr<protocols::moves::Mover>) + 72
+14  surface_docking.static.macosclangre 0x0000000102a04c7c main + 244
+15  dyld                                0x0000000186fc5d54 start + 7184
+
+[END_BACKTRACE]
+
+[FILE]: src/core/fragment/ConstantLengthFragSet.cc
+[LINE]: 135
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Assertion `aframe->length() == max_frag_length()` failed.
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+

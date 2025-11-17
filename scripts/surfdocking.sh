@@ -4,38 +4,48 @@ set -euo pipefail
 # Rosetta Surface Docking
 # 사용법:
 #   1) DB 모드(로제타 DB에 params 설치해둔 경우):
-#        ./surfdocking.sh <merged_pdb> DB [nstruct]
+#        ./surfdocking.sh <merged_pdb> DB [nstruct] [protein_name]
 #   2) 로컬 라이브러리에서 자동 선택(플랫 폴더):
-#        ./surfdocking.sh <merged_pdb> <params_dir> [nstruct]
+#        ./surfdocking.sh <merged_pdb> <params_dir> [nstruct] [protein_name]
 #      -> PDB의 HETATM resname과 일치하는 *.params만 자동 선택하여 -extra_res_fa에 추가
+#
+#   예:
+#        ./surfdocking.sh input/merge_pdb/merged_albumin_TiAl.pdb params/TiAl 1 albumin
+#        ./surfdocking.sh input/merge_pdb/merged_1H3Y_TiAl.pdb    params/TiAl 5 1H3Y
 
 if [[ $# -lt 2 ]]; then
-    echo "사용법: $0 <merged_pdb> <params_dir|DB> [nstruct]"
-    echo "예시:  $0 ../input/merge_pdb/merged_complex.pdb DB 1"
-    echo "       $0 ../input/merge_pdb/merged_complex.pdb ../params_lib 5"
+    echo "사용법: $0 <merged_pdb> <params_dir|DB> [nstruct] [protein_name]"
+    echo "예시:  $0 input/merge_pdb/merged_complex.pdb DB 1 albumin"
+    echo "       $0 input/merge_pdb/merged_complex.pdb params/TiAl 5 1H3Y"
     exit 1
 fi
 
 MERGED_PDB="$1"
-PARAMS_SRC="$2"   # 디렉토리 또는 DB
-NSTRUCT="${3:-1}"
+PARAMS_SRC="$2"           # 디렉토리 또는 DB
+NSTRUCT="${3:-1}"         # 기본 1개 구조 생성
+PROT_NAME="${4:-albumin}" # 기본 단백질 이름: albumin
 
 # 환경 설정
 ROSETTA_HOME="${ROSETTA_HOME:-/Users/junyoung/Desktop/BioMatAI/rosetta/rosetta.binary.m1.release-371/main}"
 SCRIPT_DIR="$(cd "$(dirname "$0")"; pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.."; pwd)"
 
-# 절대경로 정규화
-# --- merged pdb ---
+# --- merged pdb 절대경로 정규화 (현재 위치와 무관하게 동작) ---
 if [[ "$MERGED_PDB" != /* ]]; then
   MERGED_PDB="$(cd "$(dirname "$MERGED_PDB")" 2>/dev/null && pwd)/$(basename "$MERGED_PDB")"
 fi
 
-# --- params dir ---
-# ~ 확장 보정 (혹시 따옴표 등으로 틸드가 안 풀렸을 때 대비)
-PARAMS_DIR="./database/${PARAMS_DIR/#\~/$HOME}"
-if [[ "$PARAMS_DIR" != /* ]]; then
-  PARAMS_DIR="$(cd "$PARAMS_DIR" 2>/dev/null && pwd)"
+# --- params dir (DB 모드가 아닐 때만) ---
+PARAMS_DIR=""
+if [[ "$PARAMS_SRC" != "DB" ]]; then
+  PARAMS_DIR="$PARAMS_SRC"
+  # ~ 확장 보정
+  PARAMS_DIR="${PARAMS_DIR/#\~/$HOME}"
+
+  # 상대경로면 ROOT_DIR 기준으로 절대경로화
+  if [[ "$PARAMS_DIR" != /* ]]; then
+    PARAMS_DIR="$ROOT_DIR/$PARAMS_DIR"
+  fi
 fi
 
 echo "========================================"
@@ -44,13 +54,21 @@ echo "========================================"
 echo "병합된 PDB  : $MERGED_PDB"
 echo "Params 소스 : $PARAMS_SRC"
 echo "구조 수     : $NSTRUCT"
+echo "단백질 이름 : $PROT_NAME"
 echo "========================================"
 
 # 입력 확인
 if [[ ! -f "$MERGED_PDB" ]]; then
-  echo "[ERROR] 병합된 PDB 파일이 없습니다: $MERGED_PDB"; exit 1; fi
-if [[ ! -d "$PARAMS_DIR" ]]; then
-  echo "[ERROR] Params 디렉토리가 없습니다: $PARAMS_DIR"; exit 1; fi
+  echo "[ERROR] 병합된 PDB 파일이 없습니다: $MERGED_PDB"
+  exit 1
+fi
+
+if [[ "$PARAMS_SRC" != "DB" ]]; then
+  if [[ ! -d "$PARAMS_DIR" ]]; then
+    echo "[ERROR] Params 디렉토리가 없습니다: $PARAMS_DIR"
+    exit 1
+  fi
+fi
 
 # 실험 디렉토리
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
@@ -70,7 +88,7 @@ SURFACE_CHAIN=$(grep '^HETATM' input/complex.pdb | head -1 | awk '{print substr(
 echo "[INFO] Protein chain: $PROTEIN_CHAIN"
 echo "[INFO] Surface/Metal chain: $SURFACE_CHAIN"
 
-# surface_vectors
+# surface_vectors (현재는 Ti 기본 사용, 나중에 필요하면 metal별로 분기)
 SURFVECS_PATH="input/surface_vectors.txt"
 USER_SURFACE_VECTORS="$ROOT_DIR/input/metal/Ti/Ti_surface_vectors.txt"
 if [[ -f "$USER_SURFACE_VECTORS" ]]; then
@@ -90,20 +108,24 @@ else
     echo "[OK] surface_vectors 생성 완료: $SURFVECS_PATH"
 fi
 
-# Fragment(옵션)
-FRAG3_SRC="$ROOT_DIR/input/protein/albumin/albumin_3mers"
-FRAG9_SRC="$ROOT_DIR/input/protein/albumin/albumin_9mers"
+# Fragment(옵션) - input/protein/<PROT_NAME>/<PROT_NAME>_3mers, _9mers 사용
+FRAG3_NAME="${PROT_NAME}_3mers"
+FRAG9_NAME="${PROT_NAME}_9mers"
+FRAG_DIR="$ROOT_DIR/input/protein/${PROT_NAME}"
+FRAG3_SRC="$FRAG_DIR/${FRAG3_NAME}"
+FRAG9_SRC="$FRAG_DIR/${FRAG9_NAME}"
 USE_FRAGMENTS=false
+
 if [[ -f "$FRAG3_SRC" && -f "$FRAG9_SRC" ]]; then
-    cp "$FRAG3_SRC" "input/albumin_3mers"
-    cp "$FRAG9_SRC" "input/albumin_9mers"
+    cp "$FRAG3_SRC" "input/${FRAG3_NAME}"
+    cp "$FRAG9_SRC" "input/${FRAG9_NAME}"
     USE_FRAGMENTS=true
-    echo "[OK] Fragment 파일 복사 완료"
+    echo "[OK] Fragment 파일 복사 완료 (protein = $PROT_NAME)"
 else
-    echo "[INFO] Fragment 파일 없음 - fragment-free 모드"
+    echo "[INFO] ${PROT_NAME} fragment 파일 없음 - fragment-free 모드"
 fi
 
-# --- 핵심 변경: HETATM resname 기반으로 필요한 params만 자동 선택 ---
+# --- HETATM resname 기반으로 필요한 params만 자동 선택 ---
 declare -a CHOSEN_PARAMS=()
 if [[ "$PARAMS_SRC" != "DB" ]]; then
     echo "[INFO] PDB(HETATM)에서 필요한 params 자동 선택"
@@ -114,8 +136,8 @@ if [[ "$PARAMS_SRC" != "DB" ]]; then
     else
         echo "[INFO] 발견된 HETATM resname: $RESNAMES"
         for r in $RESNAMES; do
-            cand1="$PARAMS_SRC/${r}.params"
-            cand2="$PARAMS_SRC/${r}0.params"   # 예: TI → TI0
+            cand1="$PARAMS_DIR/${r}.params"
+            cand2="$PARAMS_DIR/${r}0.params"   # 예: TI → TI0
             chosen=""
             if   [[ -f "$cand1" ]]; then chosen="$cand1"
             elif [[ -f "$cand2" ]]; then chosen="$cand2"; fi
@@ -124,7 +146,7 @@ if [[ "$PARAMS_SRC" != "DB" ]]; then
                 CHOSEN_PARAMS+=("input/$(basename "$chosen")")
                 echo "  ✓ $(basename "$chosen")"
             else
-                echo "  ⚠️  매칭 params 없음: $r  (디렉토리: $PARAMS_SRC)"
+                echo "  ⚠️  매칭 params 없음: $r  (디렉토리: $PARAMS_DIR)"
             fi
         done
         if [[ ${#CHOSEN_PARAMS[@]} -eq 0 ]]; then
@@ -166,10 +188,10 @@ EOF
 
 # Fragment 옵션
 if [[ "$USE_FRAGMENTS" == "true" ]]; then
-cat >> "$FLAGS_FILE" << 'EOF'
+cat >> "$FLAGS_FILE" << EOF
 # Fragment Files
--in:file:frag3 input/albumin_3mers
--in:file:frag9 input/albumin_9mers
+-in:file:frag3 input/${FRAG3_NAME}
+-in:file:frag9 input/${FRAG9_NAME}
 EOF
 fi
 
